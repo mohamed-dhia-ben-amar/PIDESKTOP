@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="250.0" prefWidth="220.0" style="-fx-background-color: #aeaeae;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aces.gui.ItemController">
+   <children>
+      <VBox fx:id="vbox" prefHeight="310.0" prefWidth="252.0">
+         <children>
+            <Label fx:id="Titre_P" prefHeight="71.0" prefWidth="229.0" text="Label">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="ImgView" fitHeight="182.0" fitWidth="219.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="viewmore" mnemonicParsing="false" onAction="#Afficher_comments" text="View more" textFill="#9e4a4a">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

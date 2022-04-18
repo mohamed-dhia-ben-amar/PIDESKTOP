@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aces.gui.ModifiercoursController">
+   <children>
+      <Pane fx:id="pane" layoutY="-2.0" prefHeight="407.0" prefWidth="160.0" style="-fx-background-color: darkblue;">
+         <children>
+            <Button fx:id="back" layoutX="37.0" layoutY="86.0" mnemonicParsing="false" onAction="#backmodifier" text="Back" />
+         </children>
+      </Pane>
+      <TableView fx:id="tablearticle" layoutX="179.0" layoutY="14.0" prefHeight="280.0" prefWidth="399.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="118.0" text="ID" />
+          <TableColumn fx:id="Titre" prefWidth="280.0" text="Titre " />
+        </columns>
+      </TableView>
+      <TextField fx:id="idmodifier" layoutX="172.0" layoutY="314.0" promptText="ID" />
+      <TextField fx:id="titremodifier" layoutX="391.0" layoutY="314.0" promptText="Titre" />
+      <Button fx:id="modifier" layoutX="438.0" layoutY="360.0" mnemonicParsing="false" onAction="#modifierarticle" text="Modifier" />
+   </children>
+</AnchorPane>

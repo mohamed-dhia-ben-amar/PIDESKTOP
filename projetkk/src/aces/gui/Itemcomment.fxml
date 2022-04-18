@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="575.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aces.gui.ItemcommentController">
+   <children>
+      <Pane fx:id="pane" layoutX="10.0" layoutY="6.0" prefHeight="402.0" prefWidth="177.0">
+         <children>
+            <VBox fx:id="vbox" layoutX="197.0" layoutY="10.0" prefHeight="542.0" prefWidth="442.0" style="-fx-background-color: #fffdd0; -fx-background-radius: 2em;">
+               <children>
+                  <Label fx:id="title" prefHeight="36.0" prefWidth="105.0" text=" Title" textFill="#861d1d">
+                     <font>
+                        <Font name="Bauhaus 93" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Titre" alignment="TOP_CENTER" prefHeight="60.0" prefWidth="204.0" text=" Label" underline="true">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Label>
+                  <Label fx:id="content" prefHeight="33.0" prefWidth="135.0" text=" Our Content" textFill="#832525">
+                     <font>
+                        <Font name="Bauhaus 93" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="contenu" alignment="TOP_LEFT" prefHeight="137.0" prefWidth="427.0" style="-fx-background-color: #fffdd0;" text="   Label">
+                     <font>
+                        <Font name="Kufi Outline Shaded" size="18.0" />
+                     </font></Label>
+                  <Label fx:id="title1" prefHeight="38.0" prefWidth="135.0" text=" Comments" textFill="#861d1d">
+                     <font>
+                        <Font name="Bauhaus 93" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="comments" alignment="TOP_LEFT" prefHeight="275.0" prefWidth="431.0" text="  ">
+                     <font>
+                        <Font size="19.0" />
+                     </font></Label>
+               </children>
+            </VBox>
+            <VBox fx:id="vboxa" layoutX="2.0" prefHeight="402.0" prefWidth="173.0">
+               <children>
+                  <ImageView fx:id="image" fitHeight="234.0" fitWidth="174.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

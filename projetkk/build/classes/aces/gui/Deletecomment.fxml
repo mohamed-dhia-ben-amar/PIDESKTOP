@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="422.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aces.gui.DeletecommentController">
+   <children>
+      <Pane fx:id="pane" prefHeight="400.0" prefWidth="164.0" style="-fx-background-color: darkblue;">
+         <children>
+            <Button fx:id="menuu" layoutX="36.0" layoutY="130.0" mnemonicParsing="false" onAction="#returnback" text="Return" />
+         </children>
+      </Pane>
+      <TableView fx:id="tableview" layoutX="175.0" layoutY="14.0" prefHeight="304.0" prefWidth="460.0">
+        <columns>
+          <TableColumn fx:id="idcomment" prefWidth="96.0" text="id_comment" />
+          <TableColumn fx:id="idarticle" prefWidth="104.0" text="id_article" />
+            <TableColumn fx:id="idarticle1" prefWidth="259.0" text="contenu" />
+        </columns>
+      </TableView>
+      <TextField fx:id="id_comment" layoutX="175.0" layoutY="337.0" prefHeight="31.0" prefWidth="135.0" promptText="id_comment" />
+      <TextField fx:id="idnew" layoutX="323.0" layoutY="337.0" prefHeight="22.0" prefWidth="135.0" promptText="id_article" />
+      <TextField fx:id="newcontent" layoutX="470.0" layoutY="337.0" prefHeight="31.0" prefWidth="164.0" promptText="content" />
+      <Button fx:id="effacer" layoutX="544.0" layoutY="377.0" mnemonicParsing="false" onAction="#effacercomments" text="Effacer" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="432.0" prefWidth="688.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="GUI.ModifiertournoisbackController">
+   <children>
+      <Pane fx:id="pane" layoutX="-1.0" prefHeight="432.0" prefWidth="119.0" style="-fx-background-color: darkblue;" />
+      <TableView fx:id="tableview" layoutX="129.0" layoutY="14.0" prefHeight="221.0" prefWidth="536.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="nom" prefWidth="75.0" text="name" />
+            <TableColumn fx:id="date_debut" prefWidth="75.0" text="date_debut" />
+            <TableColumn fx:id="date_fin" prefWidth="75.0" text="date_fin" />
+            <TableColumn fx:id="description" prefWidth="75.0" text="description" />
+            <TableColumn fx:id="prix" prefWidth="75.0" text="prix" />
+            <TableColumn fx:id="participant" prefWidth="75.0" text="participant" />
+        </columns>
+      </TableView>
+      <TextField fx:id="idtextfield" layoutX="146.0" layoutY="276.0" text="id" />
+      <TextField fx:id="nametext" layoutX="356.0" layoutY="276.0" text="name" />
+      <Button fx:id="modifier" layoutX="559.0" layoutY="338.0" mnemonicParsing="false" onAction="#confirmermodifier" text="Modifier" />
+   </children>
+</AnchorPane>

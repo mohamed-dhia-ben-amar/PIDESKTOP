@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="472.0" prefWidth="738.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="GUI.SupprimertournoibackController">
+   <children>
+      <Pane fx:id="pane" layoutY="-2.0" prefHeight="471.0" prefWidth="139.0" style="-fx-background-color: darkblue;">
+         <children>
+            <Button layoutX="48.0" layoutY="73.0" mnemonicParsing="false" text="Back" />
+         </children>
+      </Pane>
+      <TableView fx:id="tableview" layoutX="148.0" layoutY="14.0" prefHeight="275.0" prefWidth="578.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="name" prefWidth="75.0" text="C2" />
+            <TableColumn fx:id="date_debut" prefWidth="75.0" text="date_debut" />
+            <TableColumn fx:id="date_fin" prefWidth="75.0" text="date_fin" />
+            <TableColumn fx:id="description" prefWidth="75.0" text="description" />
+            <TableColumn fx:id="prix" prefWidth="75.0" text="prix" />
+            <TableColumn fx:id="participant" prefWidth="125.60003662109375" text="participant" />
+        </columns>
+      </TableView>
+      <TextField fx:id="idfield" layoutX="148.0" layoutY="314.0" text="ID" />
+      <Button fx:id="supprimeer" layoutX="528.0" layoutY="373.0" mnemonicParsing="false" onAction="#supprimertournoi" text="Supprimer" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="GUI.AjouttournoibackController">
+   <children>
+      <Pane fx:id="pane" prefHeight="437.0" prefWidth="200.0" style="-fx-background-color: darkblue;">
+         <children>
+            <Button fx:id="back" layoutX="59.0" layoutY="95.0" mnemonicParsing="false" text="Back" />
+         </children>
+      </Pane>
+      <TextField fx:id="name" layoutX="226.0" layoutY="46.0" text="name" />
+      <TextField fx:id="date_debut" layoutX="225.0" layoutY="125.0" text="date_debut" />
+      <TextField fx:id="date_fin" layoutX="228.0" layoutY="167.0" text="date_fin" />
+      <TextField fx:id="description" layoutX="228.0" layoutY="206.0" text="description" />
+      <TextField fx:id="client_id" layoutX="226.0" layoutY="87.0" text="client_id" />
+      <TextField fx:id="prix" layoutX="229.0" layoutY="246.0" text="prix" />
+      <TextField fx:id="nbrparticipant" layoutX="230.0" layoutY="293.0" text="nombreparticipant" />
+      <TextField fx:id="image" layoutX="230.0" layoutY="335.0" text="image" />
+      <Button fx:id="ajouter" layoutX="469.0" layoutY="367.0" mnemonicParsing="false" text="Ajouter" />
+   </children>
+</AnchorPane>

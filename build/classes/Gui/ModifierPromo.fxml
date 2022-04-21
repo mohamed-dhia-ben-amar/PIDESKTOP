@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="820.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="Gui.ModifierPromoController">
+   <children>
+      <Pane fx:id="color" prefHeight="502.0" prefWidth="133.0" style="-fx-background-color: darkblue;">
+         <children>
+            <Button fx:id="ajouter" layoutX="18.0" layoutY="201.0" mnemonicParsing="false" onAction="#ajouterPromo" prefHeight="31.0" prefWidth="97.0" text="Ajouter" />
+            <Button fx:id="modifier" layoutX="18.0" layoutY="248.0" mnemonicParsing="false" onAction="#modifierPomo" prefHeight="31.0" prefWidth="97.0" text="Modifier" />
+            <Button fx:id="supprimer" layoutX="18.0" layoutY="291.0" mnemonicParsing="false" onAction="#supprimerPromo" prefHeight="31.0" prefWidth="97.0" text="Supprimer" />
+            <Button fx:id="Home" layoutX="18.0" layoutY="156.0" mnemonicParsing="false" onAction="#GoHome" prefHeight="31.0" prefWidth="97.0" text="Home" />
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutX="164.0" layoutY="58.0" onMouseClicked="#Click" prefHeight="310.0" prefWidth="615.0">
+         <columns>
+            <TableColumn fx:id="id_P" prefWidth="111.0" text="Id Promotion" />
+            <TableColumn fx:id="date_debut" prefWidth="138.0" text="Date Debut" />
+            <TableColumn fx:id="Pourcentage" prefWidth="185.0" text="Prourcentage" />
+            <TableColumn id="desc" fx:id="Date_Fin" prefWidth="177.0" text="Date Fin" />
+         </columns>
+      </TableView>
+      <TextField fx:id="Proucentage_E" layoutX="164.0" layoutY="441.0" prefHeight="25.0" prefWidth="174.0" promptText="Pourcentage" />
+      <DatePicker fx:id="Debut_D" layoutX="164.0" layoutY="394.0" promptText="Date Debut" />
+      <DatePicker fx:id="Fin_D" layoutX="370.0" layoutY="394.0" promptText="Date Fin" />
+      <Button fx:id="ajouterP" layoutX="581.0" layoutY="441.0" mnemonicParsing="false" onAction="#AjouterElt" prefHeight="37.0" prefWidth="149.0" style="-fx-background-color: darkblue;" text="Modifier Promo" textFill="WHITE">
+         <font>
+            <Font name="Corbel" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

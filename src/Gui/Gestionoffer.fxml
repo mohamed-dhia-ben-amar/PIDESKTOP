@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="460.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.GestionofferController">
+   <children>
+      <Pane prefHeight="110.0" prefWidth="820.0" style="-fx-background-color: darkblue;">
+         <children>
+            <Label fx:id="theaces" alignment="TOP_CENTER" layoutX="249.0" layoutY="29.0" prefHeight="47.0" prefWidth="322.0" text="Make Offers" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="offer" layoutX="48.0" layoutY="40.0" mnemonicParsing="false" onAction="#goOffer" prefHeight="31.0" prefWidth="116.0" style="-fx-background-color: white;" text="See Offers" textFill="DARKBLUE" />
+         </children>
+      </Pane>
+      <ComboBox fx:id="liste_ELt" layoutX="82.0" layoutY="177.0" onAction="#cmb_comm_changed" prefHeight="26.0" prefWidth="182.0" promptText="Element 1" />
+      <ComboBox fx:id="liste_ELt1" layoutX="531.0" layoutY="177.0" onAction="#cmb_comm_changed" prefHeight="26.0" prefWidth="182.0" promptText="Element 2" />
+      <ComboBox fx:id="liste_promo" layoutX="319.0" layoutY="293.0" onAction="#cmb_comm_changed" prefHeight="26.0" prefWidth="182.0" promptText="Promotion" />
+      <Label fx:id="theaces1" alignment="TOP_CENTER" layoutX="104.0" layoutY="280.0" prefHeight="53.0" prefWidth="160.0" text="PROMO :" textFill="DARKBLUE">
+         <font>
+            <Font name="Ebrima" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="ajouterP" layoutX="573.0" layoutY="386.0" mnemonicParsing="false" onAction="#AjouterElt" prefHeight="37.0" prefWidth="149.0" style="-fx-background-color: darkblue;" text="Make offer" textFill="WHITE">
+         <font>
+            <Font name="Corbel" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="209.0" layoutY="384.0" prefHeight="20.0" prefWidth="282.0" text="Informer les Clients de la nouvelle promotion" textFill="DARKBLUE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_email" layoutX="209.0" layoutY="409.0" prefHeight="25.0" prefWidth="182.0" promptText="Email" />
+   </children>
+</AnchorPane>

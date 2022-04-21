@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="addd" prefHeight="460.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.AjouterElementController">
+   <children>
+      <Pane fx:id="idajouter" prefHeight="463.0" prefWidth="155.0" style="-fx-background-color: darkblue;">
+         <children>
+            <Button fx:id="Home" layoutX="29.0" layoutY="125.0" mnemonicParsing="false" onAction="#GoHome" prefHeight="31.0" prefWidth="97.0" text="Home" />
+            <Button fx:id="front" layoutX="28.0" layoutY="309.0" mnemonicParsing="false" onAction="#afficherfront" prefHeight="31.0" prefWidth="97.0" text="Front " />
+            <Button fx:id="ajouter" layoutX="30.0" layoutY="172.0" mnemonicParsing="false" onAction="#ajouterElement" prefHeight="31.0" prefWidth="97.0" text="Ajouter" />
+            <Button fx:id="modifier" layoutX="28.0" layoutY="220.0" mnemonicParsing="false" onAction="#modifierElement" prefHeight="31.0" prefWidth="97.0" text="Modifier" />
+            <Button fx:id="supprimer" layoutX="28.0" layoutY="267.0" mnemonicParsing="false" onAction="#supprimerElement" prefHeight="31.0" prefWidth="97.0" text="Supprimer" />
+         </children>
+      </Pane>
+      <TextField fx:id="nomElt" layoutX="192.0" layoutY="61.0" promptText="Nom Element" />
+      <TextField fx:id="elt_Desc" layoutX="192.0" layoutY="110.0" promptText="Description" />
+      <TextField fx:id="elt_Ref" layoutX="192.0" layoutY="152.0" promptText="Reference" />
+      <TextField fx:id="eltPrix" layoutX="192.0" layoutY="244.0" prefHeight="25.0" prefWidth="182.0" promptText="Prix" />
+      <TextField fx:id="eltQte" layoutX="192.0" layoutY="287.0" prefHeight="25.0" prefWidth="182.0" promptText="Quantite" />
+      <TextField fx:id="eltType" layoutX="192.0" layoutY="198.0" prefHeight="25.0" prefWidth="182.0" promptText="type" />
+      <RadioButton fx:id="etat_Dispo" layoutX="192.0" layoutY="416.0" mnemonicParsing="false" text="Disponible" />
+      <RadioButton fx:id="Etat2" layoutX="283.0" layoutY="416.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="111.0" text="Non Disponible" />
+      <Label layoutX="192.0" layoutY="383.0" prefHeight="22.0" prefWidth="103.0" text="Etat">
+         <font>
+            <Font name="Franklin Gothic Medium" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="path_img" layoutX="192.0" layoutY="331.0" prefHeight="25.0" prefWidth="182.0" promptText="Path image" />
+      <Button layoutX="541.0" layoutY="389.0" mnemonicParsing="false" onAction="#AjouterElt" prefHeight="37.0" prefWidth="149.0" style="-fx-background-color: darkblue;" text="Ajouter Element" textFill="WHITE">
+         <font>
+            <Font name="Corbel" size="18.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="liste_promo" layoutX="514.0" layoutY="122.0" onAction="#cmb_comm_changed" prefHeight="26.0" prefWidth="182.0" promptText="Promotion" />
+      <Label layoutX="514.0" layoutY="50.0" prefHeight="22.0" prefWidth="182.0" text="Affecter Promo">
+         <font>
+            <Font name="Franklin Gothic Medium" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="choisir" layoutX="568.0" layoutY="331.0" mnemonicParsing="false" onAction="#imgB" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: darkblue;" text="Choisir" textFill="WHITE" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="image" fitHeight="127.0" fitWidth="182.0" layoutX="516.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

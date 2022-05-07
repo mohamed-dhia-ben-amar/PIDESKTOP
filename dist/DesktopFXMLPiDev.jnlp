@@ -8,7 +8,8 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="DesktopFXMLPiDev.jar" size="93451" download="eager" />
+    <jar href="DesktopFXMLPiDev.jar" size="4311890" download="eager" />
+    <jar href="lib\TrayTester.jar" size="52070" download="eager" />
     <jar href="lib\activation-1.1.1.jar" size="69409" download="eager" />
     <jar href="lib\barcodes-7.1.3-javadoc.jar" size="193016" download="eager" />
     <jar href="lib\barcodes-7.1.3-sources.jar" size="148847" download="eager" />
@@ -64,6 +65,7 @@
     <jar href="lib\svg-7.1.3-javadoc.jar" size="436812" download="eager" />
     <jar href="lib\svg-7.1.3-sources.jar" size="123816" download="eager" />
     <jar href="lib\svg-7.1.3.jar" size="97170" download="eager" />
+    <jar href="lib\tray-0.51.0.jar" size="30705" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="DesktopFXMLPiDev" >
     <param name="requiredFXVersion" value="8.0+"/>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="voir" prefHeight="573.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aces.gui.HOMEController">
+   <children>
+      <Pane fx:id="sidemenu" layoutX="-9.0" layoutY="-8.0" prefHeight="145.0" prefWidth="797.0" style="-fx-background-color: #000080;">
+         <children>
+            <Label fx:id="theaces" alignment="TOP_CENTER" layoutX="244.0" layoutY="26.0" prefHeight="47.0" prefWidth="322.0" text="The Aces" textFill="#f5e7e7">
+               <font>
+                  <Font name="Andalus" size="59.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Button fx:id="tournoi" alignment="CENTER_RIGHT" layoutX="601.0" layoutY="218.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="182.0" style="-fx-background-radius: 1em; -fx-background-color: lightblue;" text="Tournoi">
+         <font>
+            <Font name="Britannic Bold" size="24.0" />
+         </font></Button>
+      <Button fx:id="complaints1" alignment="CENTER_RIGHT" layoutX="444.0" layoutY="343.0" mnemonicParsing="false" onAction="#Backblog" prefHeight="67.0" prefWidth="165.0" style="-fx-background-color: gray; -fx-background-radius: 1em;" text="Back">
+         <font>
+            <Font name="Britannic Bold" size="26.0" />
+         </font></Button>
+      <Button fx:id="element" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="218.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="200.0" style="-fx-background-radius: 1em; -fx-background-color: #FAE29C;" text="Element " textAlignment="JUSTIFY">
+         <font>
+            <Font name="Britannic Bold" size="28.0" />
+         </font>
+      </Button>
+      <Button fx:id="blog" alignment="CENTER_RIGHT" layoutX="238.0" layoutY="218.0" mnemonicParsing="false" onAction="#GestionBlog" prefHeight="77.0" prefWidth="174.0" style="-fx-background-color: #98BF64; -fx-background-radius: 1em;" text="Blog ">
+         <font>
+            <Font name="Britannic Bold" size="28.0" />
+         </font>
+      </Button>
+      <Button fx:id="livraison" alignment="CENTER_RIGHT" layoutX="420.0" layoutY="218.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="174.0" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Offer">
+         <font>
+            <Font name="Britannic Bold" size="31.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER_RIGHT" layoutX="191.0" layoutY="343.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="209.0" style="-fx-background-radius: 1em; -fx-background-color: #59788E;" text="Complaints ">
+         <font>
+            <Font name="Britannic Bold" size="23.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imageoffer" fitHeight="56.0" fitWidth="73.0" layoutX="430.0" layoutY="229.0" opacity="0.89" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="430.0" AnchorPane.topAnchor="229.0">
+         <image>
+            <Image url="@../aces/images/chariot.gif" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="MOVE" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="elementicone" fitHeight="56.0" fitWidth="57.0" layoutX="20.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../aces/images/chercher.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="blogicone" fitHeight="56.0" fitWidth="65.0" layoutX="247.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../aces/images/book.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagetournoi" fitHeight="54.0" fitWidth="64.0" layoutX="609.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../aces/images/tournoi.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="adminimage" fitHeight="56.0" fitWidth="57.0" layoutX="459.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../aces/images/admin.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagecomplaint" fitHeight="48.0" fitWidth="57.0" layoutX="200.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../aces/images/complaintimage.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -84,11 +84,54 @@ public class LoginController implements Initializable {
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
+        } else if (username.getText().toString().equals("aycha") && password.getText().toString().equals("aycha")) {
+            error.setText("Success!");
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("LogIN");
+            alert.setHeaderText("Results:");
+            alert.setContentText("LogIN successfully!");
+            alert.showAndWait();
+
+            root = FXMLLoader.load(getClass().getResource("../gui/HOME.fxml"));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } else if (username.getText().toString().equals("amal") && password.getText().toString().equals("amal")) {
+            error.setText("Success!");
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("LogIN");
+            alert.setHeaderText("Results:");
+            alert.setContentText("LogIN successfully!");
+            alert.showAndWait();
+
+            root = FXMLLoader.load(getClass().getResource("/com/theacesrep/gui/front/MainWindow.fxml"));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }else if (username.getText().toString().equals("amal") && password.getText().toString().equals("back")) {
+            error.setText("Success!");
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("LogIN");
+            alert.setHeaderText("Results:");
+            alert.setContentText("LogIN successfully!");
+            alert.showAndWait();
+
+            root = FXMLLoader.load(getClass().getResource("/com/theacesrep/gui/back/MainWindow.fxml"));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         }else if (username.getText().isEmpty() && password.getText().isEmpty()) {
             error.setText("Please enter your data.");
         } else {
             error.setText("Wrong username or password!");
         }
+        
     }
 
 }

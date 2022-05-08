@@ -27,7 +27,7 @@ public class DesktopFXMLPiDev extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root2 = FXMLLoader.load(getClass().getResource("../gui/Front.fxml"));
+        Parent root2 = FXMLLoader.load(getClass().getResource("../gui/Login.fxml"));
         Scene scene2 = new Scene(root2);
         primaryStage.setTitle("The Aces");
         primaryStage.setScene(scene2);

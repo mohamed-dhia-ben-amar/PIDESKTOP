@@ -154,6 +154,20 @@ public class LoginController implements Initializable {
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
+        }else if (username.getText().toString().equals("mariem") && password.getText().toString().equals("mariem")) {
+            error.setText("Success!");
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("LogIN");
+            alert.setHeaderText("Results:");
+            alert.setContentText("LogIN successfully!");
+            alert.showAndWait();
+
+            root = FXMLLoader.load(getClass().getResource("../Mariem/Gui/Home.fxml"));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         }else if (username.getText().isEmpty() && password.getText().isEmpty()) {
             error.setText("Please enter your data.");
         } else {

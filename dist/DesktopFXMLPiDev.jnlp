@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="DesktopFXMLPiDev.jar" size="5730083" download="eager" />
+    <jar href="DesktopFXMLPiDev.jar" size="5904545" download="eager" />
     <jar href="lib\TrayTester.jar" size="52070" download="eager" />
     <jar href="lib\activation-1.1.1.jar" size="69409" download="eager" />
     <jar href="lib\barcodes-7.1.3-javadoc.jar" size="193016" download="eager" />

@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="DesktopFXMLPiDev.jar" size="4311890" download="eager" />
+    <jar href="DesktopFXMLPiDev.jar" size="5730083" download="eager" />
     <jar href="lib\TrayTester.jar" size="52070" download="eager" />
     <jar href="lib\activation-1.1.1.jar" size="69409" download="eager" />
     <jar href="lib\barcodes-7.1.3-javadoc.jar" size="193016" download="eager" />
@@ -18,6 +18,7 @@
     <jar href="lib\bcprov-jdk15on-1.70.jar" size="5867298" download="eager" />
     <jar href="lib\bcutil-jdk15on-1.70.jar" size="482530" download="eager" />
     <jar href="lib\commons-7.2.2.jar" size="78675" download="eager" />
+    <jar href="lib\controlsfx-8.40.11.jar" size="985420" download="eager" />
     <jar href="lib\font-asian-7.1.3.jar" size="2166108" download="eager" />
     <jar href="lib\fontawesomefx-8.4.jar" size="169129" download="eager" />
     <jar href="lib\fontawesomefx-8.5.jar" size="181458" download="eager" />
@@ -65,7 +66,9 @@
     <jar href="lib\svg-7.1.3-javadoc.jar" size="436812" download="eager" />
     <jar href="lib\svg-7.1.3-sources.jar" size="123816" download="eager" />
     <jar href="lib\svg-7.1.3.jar" size="97170" download="eager" />
+    <jar href="lib\tess4j-3.4.8.jar" size="5212199" download="eager" />
     <jar href="lib\tray-0.51.0.jar" size="30705" download="eager" />
+    <jar href="lib\twilio-8.9.0-jar-with-dependencies.jar" size="8358946" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="DesktopFXMLPiDev" >
     <param name="requiredFXVersion" value="8.0+"/>

@@ -46,7 +46,6 @@
             <TableColumn fx:id="tbTel" prefWidth="75.0" text="tel" />
         </columns>
          <columnResizePolicy>
-            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
       <Label layoutX="33.0" layoutY="100.0" text="Ajouter un Livreur" textFill="#1e17a4">

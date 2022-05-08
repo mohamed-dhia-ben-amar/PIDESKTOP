@@ -17,158 +17,162 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FrontController">
-   <children>
-      <BorderPane layoutX="6.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <left>
-            <VBox prefHeight="200.0" prefWidth="435.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
-               <children>
-                  <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fitHeight="103.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true" translateX="20.0">
-                           <image>
-                              <Image url="@TheAces.png" />
-                           </image>
-                        </ImageView>
-                        <Label prefHeight="49.0" prefWidth="252.0" text="TheAces" textFill="#1e17a4" translateX="50.0">
-                           <font>
-                              <Font name="Cambria Bold" size="40.0" />
-                           </font>
-                        </Label>
-                     </children>
-                     <VBox.margin>
-                        <Insets right="1.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets right="1.0" />
-                     </padding>
-                  </HBox>
-                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="200.0" stylesheets="@../values/style.css" VBox.vgrow="NEVER">
-                     <VBox.margin>
-                        <Insets left="30.0" right="30.0" />
-                     </VBox.margin>
-                     <styleClass>
-                        <String fx:value="search-box" />
-                        <String fx:value="shadow" />
-                     </styleClass>
-                     <children>
-                        <ImageView fx:id="cap" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-                        <TextField fx:id="tfcap" />
-                     </children>
-                  </HBox>
-                  <Pane prefHeight="57.0" prefWidth="435.0" VBox.vgrow="ALWAYS">
-                     <children>
-                        <Label fx:id="error" layoutX="36.0" layoutY="16.0" prefHeight="37.0" prefWidth="329.0" />
-                     </children></Pane>
-                  <VBox fx:id="chosenplat" alignment="CENTER" prefHeight="530.0" prefWidth="359.0" style="-fx-background-color: #1E17A4;" stylesheets="@../values/style.css">
-                     <VBox.margin>
-                        <Insets left="50.0" right="50.0" />
-                     </VBox.margin>
-                     <children>
-                        <ImageView fx:id="img" fitHeight="120.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../image/sushi_PNG9267.png" />
-                           </image>
-                           <VBox.margin>
-                              <Insets top="20.0" />
-                           </VBox.margin>
-                        </ImageView>
-                        <HBox prefHeight="60.0" prefWidth="335.0">
-                           <VBox.margin>
-                              <Insets left="20.0" top="30.0" />
-                           </VBox.margin>
-                           <children>
-                              <Label fx:id="prenom" alignment="CENTER" prefHeight="47.0" prefWidth="168.0" text="prenom" textFill="WHITE">
-                                 <font>
-                                    <Font size="32.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="zone" text="zone" textFill="WHITE">
-                                 <font>
-                                    <Font size="32.0" />
-                                 </font>
-                              </Label>
-                           </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FrontController">
+    <children>
+        <BorderPane layoutX="6.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <left>
+                <VBox prefHeight="200.0" prefWidth="435.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="103.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true" translateX="20.0">
+                                    <image>
+                                        <Image url="@1.png" />
+                                    </image>
+                                </ImageView>
+                                <Label prefHeight="49.0" prefWidth="252.0" text="TheAces" textFill="#1e17a4" translateX="50.0">
+                                    <font>
+                                        <Font name="Cambria Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets right="1.0" />
+                            </VBox.margin>
+                            <padding>
+                                <Insets right="1.0" />
+                            </padding>
                         </HBox>
-                        <TextField fx:id="tfMethod" promptText="method" style="-fx-background-color: #7393B3;" styleClass="add-btn" stylesheets="@style.css" />
-                        <TextField fx:id="tfIdClient" promptText="idClient" style="-fx-background-color: #7393B3;" styleClass="add-btn" stylesheets="@style.css" />
-                        <TextField fx:id="tfIdProd" promptText="idProd" style="-fx-background-color: #7393B3;" styleClass="add-btn" stylesheets="@style.css" />
-                        <TextField fx:id="tfAdresse" promptText="adresse client" style="-fx-background-color: #7393B3;" styleClass="add-btn" stylesheets="@style.css" />
-                        <Button fx:id="but" mnemonicParsing="false" onAction="#ajouterLivraison" prefHeight="50.0" prefWidth="270.0" styleClass="add-btn" stylesheets="@../values/style.css" text="Ajouter Livraison" textFill="#828282">
-                           <VBox.margin>
-                              <Insets bottom="20.0" top="30.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Button>
-                        <Label fx:id="cin" alignment="CENTER" prefHeight="47.0" prefWidth="168.0" textFill="WHITE">
-                           <font>
-                              <Font size="32.0" />
-                           </font>
-                        </Label>
-                     </children>
-                     <styleClass>
-                        <String fx:value="chosen-fruit-card" />
-                        <String fx:value="shadow" />
-                     </styleClass>
-                  </VBox>
-                  <Pane prefHeight="57.0" prefWidth="435.0" VBox.vgrow="ALWAYS" />
-               </children>
-            </VBox>
-         </left>
-         <center>
-            <VBox BorderPane.alignment="CENTER">
-               <children>
-                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="200.0">
-                     <VBox.margin>
-                        <Insets left="20.0" right="20.0" />
-                     </VBox.margin>
-                     <children>
-                        <Label prefHeight="29.0" prefWidth="88.0" text="language" textFill="#878787">
-                           <font>
-                              <Font name="Cambria Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <Label prefHeight="29.0" prefWidth="77.0" text="English" textFill="#878787" underline="true">
-                           <font>
-                              <Font name="Cambria" size="18.0" />
-                           </font>
-                        </Label>
-                        <Pane prefHeight="65.0" prefWidth="393.0" HBox.hgrow="ALWAYS" />
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="shadow" stylesheets="@../values/style.css">
-                     <VBox.margin>
-                        <Insets left="20.0" right="20.0" top="10.0" />
-                     </VBox.margin>
-                     <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" text="Liste des livreurs" textFill="#1f1bd6">
-                           <font>
-                              <Font name="System Bold" size="58.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
-                     <children>
-                        <ScrollPane fx:id="scroll" prefHeight="570.0" prefWidth="785.0" styleClass="transparent" stylesheets="@../values/style.css">
-                           <HBox.margin>
-                              <Insets top="10.0" />
-                           </HBox.margin>
-                           <content>
-                              <GridPane fx:id="grid">
-                                <rowConstraints>
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                </rowConstraints>
-                              </GridPane>
-                           </content>
-                        </ScrollPane>
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
-         </center>
-      </BorderPane>
-   </children>
+                        <HBox alignment="CENTER" prefHeight="65.0" prefWidth="200.0" stylesheets="@../values/style.css" VBox.vgrow="NEVER">
+                            <VBox.margin>
+                                <Insets left="30.0" right="30.0" />
+                            </VBox.margin>
+                            <styleClass>
+                                <String fx:value="search-box" />
+                                <String fx:value="shadow" />
+                            </styleClass>
+                            <children>
+                                <ImageView fx:id="cap" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                <TextField fx:id="tfcap" />
+                            </children>
+                        </HBox>
+                        <Pane prefHeight="57.0" prefWidth="435.0" VBox.vgrow="ALWAYS">
+                            <children>
+                                <Label fx:id="error" layoutX="36.0" layoutY="16.0" prefHeight="37.0" prefWidth="329.0" />
+                            </children>
+                        </Pane>
+                        <VBox fx:id="chosenplat" alignment="CENTER" prefHeight="530.0" prefWidth="359.0" style="-fx-background-color: #1E17A4;" stylesheets="@../values/style.css">
+                            <VBox.margin>
+                                <Insets left="50.0" right="50.0" />
+                            </VBox.margin>
+                            <children>
+                                <ImageView fx:id="img" fitHeight="120.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../image/sushi_PNG9267.png" />
+                                    </image>
+                                    <VBox.margin>
+                                        <Insets top="20.0" />
+                                    </VBox.margin>
+                                </ImageView>
+                                <HBox prefHeight="60.0" prefWidth="335.0">
+                                    <VBox.margin>
+                                        <Insets left="20.0" top="30.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Label fx:id="prenom" alignment="CENTER" prefHeight="47.0" prefWidth="168.0" text="prenom" textFill="WHITE">
+                                            <font>
+                                                <Font size="32.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="zone" text="zone" textFill="WHITE">
+                                            <font>
+                                                <Font size="32.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <TextField fx:id="tfMethod" promptText="method" style="-fx-background-color: #7393B3;" styleClass="add-btn" stylesheets="@style.css" />
+                                <TextField fx:id="tfIdClient" promptText="idClient" style="-fx-background-color: #7393B3;" styleClass="add-btn" stylesheets="@style.css" />
+                                <TextField fx:id="tfIdProd" promptText="idProd" style="-fx-background-color: #7393B3;" styleClass="add-btn" stylesheets="@style.css" />
+                                <TextField fx:id="tfAdresse" promptText="adresse client" style="-fx-background-color: #7393B3;" styleClass="add-btn" stylesheets="@style.css" />
+                                <Button fx:id="but" mnemonicParsing="false" onAction="#ajouterLivraison" prefHeight="50.0" prefWidth="270.0" styleClass="add-btn" stylesheets="@../values/style.css" text="Ajouter Livraison" textFill="#828282">
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" top="30.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="logout" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#LogOut" style="-fx-background-color: white;" text="LogOut" textFill="#46b5fa">
+                                </Button>
+                                <Label fx:id="cin" alignment="CENTER" prefHeight="47.0" prefWidth="168.0" textFill="WHITE">
+                                    <font>
+                                        <Font size="32.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <styleClass>
+                                <String fx:value="chosen-fruit-card" />
+                                <String fx:value="shadow" />
+                            </styleClass>
+                        </VBox>
+                        <Pane prefHeight="57.0" prefWidth="435.0" VBox.vgrow="ALWAYS" />
+                    </children>
+                </VBox>
+            </left>
+            <center>
+                <VBox BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="65.0" prefWidth="200.0">
+                            <VBox.margin>
+                                <Insets left="20.0" right="20.0" />
+                            </VBox.margin>
+                            <children>
+                                <Label prefHeight="29.0" prefWidth="88.0" text="language" textFill="#878787">
+                                    <font>
+                                        <Font name="Cambria Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label prefHeight="29.0" prefWidth="77.0" text="English" textFill="#878787" underline="true">
+                                    <font>
+                                        <Font name="Cambria" size="18.0" />
+                                    </font>
+                                </Label>
+                                <Pane prefHeight="65.0" prefWidth="393.0" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="shadow" stylesheets="@../values/style.css">
+                            <VBox.margin>
+                                <Insets left="20.0" right="20.0" top="10.0" />
+                            </VBox.margin>
+                            <children>
+                                <Label alignment="CENTER" contentDisplay="CENTER" text="Liste des livreurs" textFill="#1f1bd6">
+                                    <font>
+                                        <Font name="System Bold" size="58.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                            <children>
+                                <ScrollPane fx:id="scroll" prefHeight="570.0" prefWidth="785.0" styleClass="transparent" stylesheets="@../values/style.css">
+                                    <HBox.margin>
+                                        <Insets top="10.0" />
+                                    </HBox.margin>
+                                    <content>
+                                        <GridPane fx:id="grid">
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                        </GridPane>
+                                    </content>
+                                </ScrollPane>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </center>
+
+        </BorderPane>
+    </children>
 </AnchorPane>

@@ -44,7 +44,6 @@
             <TableColumn fx:id="tbEtat" prefWidth="75.0" text="etat" />
         </columns>
          <columnResizePolicy>
-            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
       <Label layoutX="33.0" layoutY="100.0" text="Ajouter une Livraison" textFill="#1e17a4">

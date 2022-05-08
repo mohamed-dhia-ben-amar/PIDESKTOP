@@ -9,6 +9,7 @@ import aces.entities.Article;
 import aces.entities.Commentaire;
 import aces.services.CrudArticles;
 import aces.services.CrudCommentaires;
+import desktopfxmlpidev.DesktopFXMLPiDev;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -25,6 +26,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -34,6 +36,11 @@ import javafx.stage.Stage;
  * @author aycha
  */
 public class CommentbackController implements Initializable {
+    
+    
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
     @FXML
     private Pane pane;
@@ -49,6 +56,8 @@ public class CommentbackController implements Initializable {
     private Button delete;
     @FXML
     private Button returnmenu;
+    @FXML
+    private Button logout;
 
     /**
      * Initializes the controller class.
@@ -91,6 +100,17 @@ public class CommentbackController implements Initializable {
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(modifierCours_scene);
         app_stage.show(); 
+    }
+
+    @FXML
+    private void LogOut(MouseEvent event) throws IOException {
+        DesktopFXMLPiDev m = new DesktopFXMLPiDev();
+        root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
     }
     
 }

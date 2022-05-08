@@ -6,6 +6,7 @@ package Mariem.Gui;
 
 import Mariem.Entity.Element;
 import Mariem.Services.ElementService;
+import desktopfxmlpidev.DesktopFXMLPiDev;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
@@ -33,6 +35,10 @@ import javafx.stage.Stage;
  * @author PC
  */
 public class FrontController implements Initializable {
+
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
     @FXML
     private ScrollPane Scrollpane;
@@ -50,25 +56,24 @@ public class FrontController implements Initializable {
     private Button supprimer;
     @FXML
     private Button Home;
+    @FXML
+    private Button logout;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-         
-        ElementService cc = new ElementService(); 
-         List <Element> mylist =  new ArrayList<>();
-         
-        mylist=cc.afficher();
-        
-        
-        
-         
+
+        ElementService cc = new ElementService();
+        List<Element> mylist = new ArrayList<>();
+
+        mylist = cc.afficher();
+
         int column = 0;
         int row = 1;
         try {
-           for (int i=0;i<mylist.size();i++){
+            for (int i = 0; i < mylist.size(); i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("Item.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
@@ -97,12 +102,11 @@ public class FrontController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-              
-            
-        // TODO
-    }    
 
- @FXML
+        // TODO
+    }
+
+    @FXML
 
     private void afficherfront(ActionEvent event) throws IOException {
         System.out.println("You clicked me!");
@@ -110,17 +114,17 @@ public class FrontController implements Initializable {
         Scene AfficherElt_scene = new Scene(AfficherElt);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(AfficherElt_scene);
-        app_stage.show(); 
+        app_stage.show();
     }
 
     @FXML
     private void ajouterElement(ActionEvent event) throws IOException {
-           System.out.println("You clicked me!");
+        System.out.println("You clicked me!");
         Parent AfficherElt = FXMLLoader.load(getClass().getResource("AjouterElement.fxml"));
         Scene AfficherElt_scene = new Scene(AfficherElt);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(AfficherElt_scene);
-        app_stage.show(); 
+        app_stage.show();
     }
 
     @FXML
@@ -130,7 +134,7 @@ public class FrontController implements Initializable {
         Scene AfficherElt_scene = new Scene(AfficherElt);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(AfficherElt_scene);
-        app_stage.show(); 
+        app_stage.show();
     }
 
     @FXML
@@ -140,19 +144,29 @@ public class FrontController implements Initializable {
         Scene AfficherElt_scene = new Scene(AfficherElt);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(AfficherElt_scene);
-        app_stage.show(); 
+        app_stage.show();
     }
 
-        @FXML
+    @FXML
     private void GoHome(ActionEvent event) throws IOException {
         System.out.println("You clicked me!");
         Parent AfficherElt = FXMLLoader.load(getClass().getResource("Home.fxml"));
         Scene AfficherElt_scene = new Scene(AfficherElt);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(AfficherElt_scene);
-        app_stage.show(); 
-        
+        app_stage.show();
+
     }
 
-    
+    @FXML
+    private void LogOut(MouseEvent event) throws IOException {
+        DesktopFXMLPiDev m = new DesktopFXMLPiDev();
+        root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
 }

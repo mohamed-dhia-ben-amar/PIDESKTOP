@@ -82,7 +82,7 @@ public class badWordsFilter {
             // The "(?i)" is to make the replacement case insensitive.
             inputToReturn = inputToReturn.replaceAll("(?i)" + swearWord, stars);
         }
-        
+
         System.out.println(inputToReturn);
 
         return inputToReturn;
@@ -94,12 +94,11 @@ public class badWordsFilter {
             // The following spreadsheet is from: https://gist.github.com/PimDeWitte/c04cc17bc5fa9d7e3aee6670d4105941
             // (If the spreadsheet ever ceases to exist, then this application will still function normally otherwise - it just won't censor any swear words.)
 
-//            FileReader fr = new FileReader("C:\\Users\\MSI\\Downloads\\Word_Filter - Sheet1.csv");
-//    	     BufferedReader reader = new BufferedReader(fr);
-
-            BufferedReader reader = new BufferedReader(new InputStreamReader(new URL(
-                    "https://docs.google.com/spreadsheets/d/1hIEi2YG3ydav1E06Bzf2mQbGZ12kh2fe4ISgLg_UBuM/export?format=csv")
-                    .openConnection().getInputStream()));
+            FileReader fr = new FileReader("C:\\Users\\MSI\\Downloads\\Word_Filter - Sheet1.csv");
+            BufferedReader reader = new BufferedReader(fr);
+//            BufferedReader reader = new BufferedReader(new InputStreamReader(new URL(
+//                    "https://docs.google.com/spreadsheets/d/1hIEi2YG3ydav1E06Bzf2mQbGZ12kh2fe4ISgLg_UBuM/export?format=csv")
+//                    .openConnection().getInputStream()));
 
             String currentLine = "";
             while ((currentLine = reader.readLine()) != null) {

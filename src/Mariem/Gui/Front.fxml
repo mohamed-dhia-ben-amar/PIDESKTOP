@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="501.0" prefWidth="881.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="Mariem.Gui.FrontController">
+<AnchorPane id="AnchorPane" prefHeight="501.0" prefWidth="881.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mariem.Gui.FrontController">
    <children>
       <ScrollPane fx:id="Scrollpane" layoutX="156.0" layoutY="25.0" prefHeight="451.0" prefWidth="716.0">
          <content>
@@ -26,6 +25,8 @@
             <Button fx:id="modifier" layoutX="18.0" layoutY="239.0" mnemonicParsing="false" onAction="#modifierElement" prefHeight="31.0" prefWidth="97.0" text="Modifier" />
             <Button fx:id="supprimer" layoutX="18.0" layoutY="282.0" mnemonicParsing="false" onAction="#supprimerElement" prefHeight="31.0" prefWidth="97.0" text="Supprimer" />
             <Button fx:id="Home" layoutX="18.0" layoutY="147.0" mnemonicParsing="false" onAction="#GoHome" prefHeight="31.0" prefWidth="97.0" text="Home" />
+            <Button fx:id="logout" alignment="CENTER" layoutX="39.0" layoutY="376.0" mnemonicParsing="false" onMouseClicked="#LogOut" style="-fx-background-color: white;" text="LogOut" textFill="#46b5fa">
+            </Button>
          </children>
       </Pane>
    </children>

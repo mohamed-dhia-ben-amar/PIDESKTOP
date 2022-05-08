@@ -68,32 +68,28 @@ public class GestionFrontController implements Initializable {
     private ImageView homeid;
     @FXML
     private TextField rechercher;
-      Article article;
-     public static Article article2;
+    Article article;
+    public static Article article2;
 
     /**
      * Initializes the controller class.
      */
-    private   ObservableList<ObservableList>  data = FXCollections.observableArrayList();
+    private ObservableList<ObservableList> data = FXCollections.observableArrayList();
     @FXML
     private Button tele;
+
     @Override
-    public void initialize(URL url, ResourceBundle rb) {   
-        
-       
-        
-         CrudArticles cc = new CrudArticles(); 
-         List <Article> mylist =  new ArrayList<>();
-         
-        mylist=cc.afficherArticle();
-        
-        
-        
-         
+    public void initialize(URL url, ResourceBundle rb) {
+
+        CrudArticles cc = new CrudArticles();
+        List<Article> mylist = new ArrayList<>();
+
+        mylist = cc.afficherArticle();
+
         int column = 0;
         int row = 1;
         try {
-           for (int i=0;i<mylist.size();i++){
+            for (int i = 0; i < mylist.size(); i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("item.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
@@ -122,48 +118,39 @@ public class GestionFrontController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-              
-              
-              
-              
-          }
-                    
-          
-     
+
+    }
 
     @FXML
     private void Homereturn(ActionEvent event) throws IOException {
-        
+
         System.out.println("You clicked me!");
         Parent modifierCours = FXMLLoader.load(getClass().getResource("Home.fxml"));
         Scene modifierCours_scene = new Scene(modifierCours);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(modifierCours_scene);
-        app_stage.show(); 
+        app_stage.show();
     }
 
     @FXML
     private void searchtest(ActionEvent event) {
-         
+
     }
 
     @FXML
     private void search(KeyEvent event) {
-         System.out.println("test");
-         gridpane.getChildren().clear();
-         
-          CrudArticles cc = new CrudArticles(); 
-         List <Article> mylist =  new ArrayList<>();
-         
-        mylist=cc.afficherArticlesearch(rechercher.getText());
-        
-        
-        
-         
+        System.out.println("test");
+        gridpane.getChildren().clear();
+
+        CrudArticles cc = new CrudArticles();
+        List<Article> mylist = new ArrayList<>();
+
+        mylist = cc.afficherArticlesearch(rechercher.getText());
+
         int column = 0;
         int row = 1;
         try {
-           for (int i=0;i<mylist.size();i++){
+            for (int i = 0; i < mylist.size(); i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("item.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
@@ -196,7 +183,7 @@ public class GestionFrontController implements Initializable {
 
     @FXML
     private void telecharger(ActionEvent event) {
-  
+
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation");
         alert.setHeaderText("Voulez vous exporter la liste des articles en un fichier PDF ?");
@@ -213,14 +200,9 @@ public class GestionFrontController implements Initializable {
             } catch (FileNotFoundException ex) {
                 System.out.println("Controller.GestionGuideController.DownloadPDF()" + ex.getMessage());
             }
-        
-        
-        
-        }
-    
-        
-    }
-     
-    }   
-    
 
+        }
+
+    }
+
+}
